@@ -1,0 +1,49 @@
+{
+  "name": "BAD-HEROKU-BOT",
+  "description": "Heroku controller bot. Controls your Heroku apps using your Heroku API key.",
+  "logo": "https://envs.sh/WkW.jpg",
+  "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "pyrogram",
+    "heroku"
+  ],
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A bot token from @BotFather",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram user ID(s) allowed to control the bot. Separate multiple IDs with a space.",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Optional. Chat ID (user/group/channel) where the bot sends a message when it starts. Example: -1001234567890",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku account's API key",
+      "required": true
+    },
+    "GITHUB_TOKEN": {
+      "description": "Optional. GitHub token with write access, only needed for the Push to GitHub button.",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}

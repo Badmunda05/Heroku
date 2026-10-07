@@ -1,0 +1,8 @@
+aiohttp
+python-dotenv
+pyromod
+requests
+tgcrypto
+urllib3
+kurigram
+richgram
